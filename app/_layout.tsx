@@ -1,3 +1,5 @@
+import { useAppTheme } from "@/hooks/useAppTheme";
+import { ThemeProvider } from "@/providers/theme-provider";
 import { ClerkProvider } from "@clerk/expo";
 import { tokenCache } from "@clerk/expo/token-cache";
 import { Stack } from "expo-router";
@@ -10,9 +12,20 @@ if (!publishableKey) {
 }
 
 export default function RootLayout() {
+  const theme = useAppTheme();
+
   return (
     <ClerkProvider publishableKey={publishableKey} tokenCache={tokenCache}>
-      <Stack />
+      <ThemeProvider name="default">
+        <Stack
+          screenOptions={{
+            headerShown: false,
+            contentStyle: {
+              backgroundColor: theme.background,
+            },
+          }}
+        />
+      </ThemeProvider>
     </ClerkProvider>
   );
 }
