@@ -48,5 +48,6 @@ export function useAppTheme(themeName: ThemeName = "default") {
     priorityHighForeground: theme["--color-priority-high-foreground"],
 
     toggleTheme,
+    isDark,
   };
 }

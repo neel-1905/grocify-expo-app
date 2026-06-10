@@ -18,6 +18,10 @@ export default function RootLayout() {
   return (
     <ClerkProvider publishableKey={publishableKey} tokenCache={tokenCache}>
       <ThemeProvider name="default">
+        {/* <StatusBar
+          barStyle={theme.isDark ? "light-content" : "dark-content"}
+          backgroundColor={theme.background}
+        /> */}
         <QueryProvider>
           <Stack
             screenOptions={{

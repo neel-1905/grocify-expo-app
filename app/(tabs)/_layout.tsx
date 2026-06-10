@@ -23,8 +23,8 @@ const TABS: {
   icon: ComponentProps<typeof FontAwesome>["name"];
 }[] = [
   { name: "index", label: "Home", icon: "home" },
+  { name: "planner", label: "Planner", icon: "plus-circle" },
   { name: "insights", label: "Insights", icon: "bar-chart" },
-  { name: "planner", label: "Planner", icon: "calendar" },
 ];
 
 function FloatingTabBar({
@@ -36,7 +36,7 @@ function FloatingTabBar({
   const insets = useSafeAreaInsets();
 
   return (
-    <View style={[styles.wrapper, { bottom: insets.bottom + 16 }]}>
+    <View style={[styles.wrapper, { bottom: insets.bottom }]}>
       <View style={[styles.bar, { backgroundColor: theme.card }]}>
         {state.routes.map((route, index) => {
           const tab = TABS[index];

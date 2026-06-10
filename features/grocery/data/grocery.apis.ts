@@ -1,4 +1,6 @@
-export const fetchGroceryItems = async () => {
+import { GroceryItem } from "../domain/grocery.types";
+
+export const fetchGroceryItems = async (): Promise<GroceryItem[]> => {
   const response = await fetch("/api/items");
   const data = await response.json();
 
