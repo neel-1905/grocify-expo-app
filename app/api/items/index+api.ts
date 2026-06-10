@@ -14,8 +14,8 @@ export async function GET() {
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { name, category, quantity, purchased, priority } = body;
-    if (!name || !category || !purchased || !priority) {
+    const { name, category, quantity, priority } = body;
+    if (!name || !category || !priority) {
       return Response.json(
         { error: "Missing required fields", success: false },
         { status: 400 },

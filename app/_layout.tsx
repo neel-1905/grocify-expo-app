@@ -1,4 +1,5 @@
 import { useAppTheme } from "@/hooks/useAppTheme";
+import { QueryProvider } from "@/providers/query-provider";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { ClerkProvider } from "@clerk/expo";
 import { tokenCache } from "@clerk/expo/token-cache";
@@ -17,14 +18,16 @@ export default function RootLayout() {
   return (
     <ClerkProvider publishableKey={publishableKey} tokenCache={tokenCache}>
       <ThemeProvider name="default">
-        <Stack
-          screenOptions={{
-            headerShown: false,
-            contentStyle: {
-              backgroundColor: theme.background,
-            },
-          }}
-        />
+        <QueryProvider>
+          <Stack
+            screenOptions={{
+              headerShown: false,
+              contentStyle: {
+                backgroundColor: theme.background,
+              },
+            }}
+          />
+        </QueryProvider>
       </ThemeProvider>
     </ClerkProvider>
   );
