@@ -31,27 +31,27 @@
 }
 
 :root {
-  --color-background: hsl(138 47% 97%);
-  --color-foreground: hsl(146 52% 15%);
-  --color-card: hsl(0 0% 100%);
-  --color-card-foreground: hsl(146 52% 15%);
-  --color-primary: hsl(147 75% 33%);
-  --color-primary-foreground: hsl(0 0% 100%);
-  --color-secondary: hsl(143 61% 91%);
-  --color-secondary-foreground: hsl(146 55% 24%);
-  --color-muted: hsl(140 57% 94%);
-  --color-muted-foreground: hsl(146 26% 40%);
-  --color-accent: hsl(142 72% 84%);
-  --color-destructive: hsl(8 100% 97%);
-  --color-destructive-foreground: hsl(6 74% 54%);
-  --color-border: hsl(141 47% 83%);
-  --color-input: hsl(141 47% 83%);
-  --color-ring: hsl(146 75% 45%);
-  --color-success: hsl(146 80% 40%);
-  --color-priority-low: hsl(142 73% 90%);
-  --color-priority-low-foreground: hsl(146 68% 33%);
-  --color-priority-medium: hsl(45 100% 90%);
-  --color-priority-medium-foreground: hsl(35 91% 31%);
-  --color-priority-high: hsl(10 100% 92%);
-  --color-priority-high-foreground: hsl(6 71% 48%);
+  --color-background: 138 47% 97%;
+  --color-foreground: 146 52% 15%;
+  --color-card: 0 0% 100%;
+  --color-card-foreground: 146 52% 15%;
+  --color-primary: 147 75% 33%;
+  --color-primary-foreground: 0 0% 100%;
+  --color-secondary: 143 61% 91%;
+  --color-secondary-foreground: 146 55% 24%;
+  --color-muted: 140 57% 94%;
+  --color-muted-foreground: 146 26% 40%;
+  --color-accent: 142 72% 84%;
+  --color-destructive: 8 100% 97%;
+  --color-destructive-foreground: 6 74% 54%;
+  --color-border: 141 47% 83%;
+  --color-input: 141 47% 83%;
+  --color-ring: 146 75% 45%;
+  --color-success: 146 80% 40%;
+  --color-priority-low: 142 73% 90%;
+  --color-priority-low-foreground: 146 68% 33%;
+  --color-priority-medium: 45 100% 90%;
+  --color-priority-medium-foreground: 35 91% 31%;
+  --color-priority-high: 10 100% 92%;
+  --color-priority-high-foreground: 6 71% 48%;
 }

@@ -1,8 +1,13 @@
 import { ThemeName, themes } from "@/constants/themes";
-import { useColorScheme } from "react-native";
+import { Appearance, useColorScheme } from "react-native";
 
 export function useAppTheme(themeName: ThemeName = "default") {
   const colorScheme = useColorScheme() ?? "light";
+  const isDark = colorScheme === "dark";
+
+  const toggleTheme = () => {
+    Appearance.setColorScheme(isDark ? "light" : "dark");
+  };
 
   const theme = themes[themeName][colorScheme];
 
@@ -41,5 +46,7 @@ export function useAppTheme(themeName: ThemeName = "default") {
 
     priorityHigh: theme["--color-priority-high"],
     priorityHighForeground: theme["--color-priority-high-foreground"],
+
+    toggleTheme,
   };
 }
