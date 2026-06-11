@@ -23,7 +23,7 @@ export const createGroceryItem = async (item: any) => {
   const data = await response.json();
 
   if (!data.success) {
-    throw new Error("Failed to create grocery item");
+    throw new Error("Failed to create grocery item: " + data.error);
   }
 
   return data.item;

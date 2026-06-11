@@ -98,8 +98,8 @@ export default function TabsLayout() {
       tabBar={(props) => <FloatingTabBar {...props} theme={theme} />}
     >
       <Tabs.Screen name="index" />
-      <Tabs.Screen name="insights" />
       <Tabs.Screen name="planner" />
+      <Tabs.Screen name="insights" />
     </Tabs>
   );
 }

@@ -6,6 +6,10 @@ export async function getGroceryItems() {
   return db.select().from(groceryItems).orderBy(desc(groceryItems.updated_at));
 }
 
+export async function getGroceryItemByName(name: string) {
+  return db.select().from(groceryItems).where(eq(groceryItems.name, name));
+}
+
 export async function createGroceryItem(item: {
   name: string;
   category: string;

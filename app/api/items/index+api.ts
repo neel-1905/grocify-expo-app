@@ -1,4 +1,8 @@
-import { createGroceryItem, getGroceryItems } from "@/lib/server/db.actions";
+import {
+  createGroceryItem,
+  getGroceryItemByName,
+  getGroceryItems,
+} from "@/lib/server/db.actions";
 
 export async function GET() {
   try {
@@ -18,6 +22,14 @@ export async function POST(request: Request) {
     if (!name || !category || !priority) {
       return Response.json(
         { error: "Missing required fields", success: false },
+        { status: 400 },
+      );
+    }
+
+    const existingItem = await getGroceryItemByName(name);
+    if (existingItem.length > 0) {
+      return Response.json(
+        { error: "Item already exists", success: false },
         { status: 400 },
       );
     }
