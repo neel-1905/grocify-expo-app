@@ -1,6 +1,6 @@
 import { clearPurchasedItems } from "@/lib/server/db.actions";
 
-export async function POST() {
+export async function DELETE() {
   try {
     await clearPurchasedItems();
     return Response.json({ success: true }, { status: 200 });

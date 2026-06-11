@@ -50,3 +50,14 @@ export async function deleteGroceryItem(id: string) {
   const data = await res.json();
   if (!data.ok) throw new Error(data.error);
 }
+
+export async function clearPurchasedItems() {
+  const res = await fetch("/api/items/clear-purchased", {
+    method: "DELETE",
+  });
+  const data = await res.json();
+  if (data.success) {
+    return data;
+  }
+  throw new Error(data.error);
+}
